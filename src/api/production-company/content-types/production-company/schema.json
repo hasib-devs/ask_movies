@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "production_companies",
+  "info": {
+    "singularName": "production-company",
+    "pluralName": "production-companies",
+    "displayName": "Production Company",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "movies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie.movie",
+      "mappedBy": "production_companies"
+    }
+  }
+}

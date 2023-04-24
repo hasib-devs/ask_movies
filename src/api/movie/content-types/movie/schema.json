@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "singularName": "movie",
+    "pluralName": "movies",
+    "displayName": "Movie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review"
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "runtime": {
+      "type": "decimal"
+    },
+    "language": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "trailer": {
+      "type": "string"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "movies"
+    },
+    "genres": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::genre.genre",
+      "inversedBy": "movies"
+    },
+    "casts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cast.cast",
+      "inversedBy": "movies"
+    },
+    "crews": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::crew.crew",
+      "inversedBy": "movies"
+    },
+    "production_companies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::production-company.production-company",
+      "inversedBy": "movies"
+    },
+    "writers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::crew.crew",
+      "inversedBy": "movie_writers"
+    },
+    "awards": {
+      "type": "richtext"
+    },
+    "keywords": {
+      "type": "richtext"
+    },
+    "country": {
+      "type": "customField",
+      "customField": "plugin::country-select.country"
+    }
+  }
+}
