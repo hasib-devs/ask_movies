@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_movie_casts",
+  "info": {
+    "displayName": "Cast",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cast": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cast.cast"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "Director",
+        "Writer",
+        "Actor",
+        "Other"
+      ]
+    }
+  }
+}

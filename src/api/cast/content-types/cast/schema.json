@@ -15,19 +15,14 @@
     "name": {
       "type": "string"
     },
-    "movies": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::movie.movie",
-      "mappedBy": "casts"
-    },
     "avatar": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "private": true
+      "required": false,
+      "private": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

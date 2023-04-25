@@ -68,12 +68,6 @@
       "target": "api::genre.genre",
       "inversedBy": "movies"
     },
-    "casts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::cast.cast",
-      "inversedBy": "movies"
-    },
     "production_companies": {
       "type": "relation",
       "relation": "manyToMany",
@@ -94,6 +88,12 @@
       "type": "component",
       "repeatable": true,
       "component": "movie.videos"
+    },
+    "cast": {
+      "displayName": "Cast",
+      "type": "component",
+      "repeatable": true,
+      "component": "movie.cast"
     }
   }
 }
