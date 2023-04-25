@@ -74,23 +74,11 @@
       "target": "api::cast.cast",
       "inversedBy": "movies"
     },
-    "crews": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::crew.crew",
-      "inversedBy": "movies"
-    },
     "production_companies": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::production-company.production-company",
       "inversedBy": "movies"
-    },
-    "writers": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::crew.crew",
-      "inversedBy": "movie_writers"
     },
     "awards": {
       "type": "richtext"
@@ -101,6 +89,11 @@
     "country": {
       "type": "customField",
       "customField": "plugin::country-select.country"
+    },
+    "videos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "movie.videos"
     }
   }
 }

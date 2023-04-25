@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_movie_videos",
+  "info": {
+    "displayName": "videos"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "videos": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

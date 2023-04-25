@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cast",
     "pluralName": "casts",
-    "displayName": "Cast"
+    "displayName": "Cast",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -14,14 +15,19 @@
     "name": {
       "type": "string"
     },
-    "role": {
-      "type": "string"
-    },
     "movies": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::movie.movie",
       "mappedBy": "casts"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "private": true
     }
   }
 }

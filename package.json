@@ -14,6 +14,7 @@
     "@strapi/plugin-documentation": "^4.9.2",
     "@strapi/plugin-i18n": "4.9.2",
     "@strapi/plugin-users-permissions": "4.9.2",
+    "@strapi/provider-upload-aws-s3": "^4.9.2",
     "@strapi/strapi": "4.9.2",
     "mysql": "2.18.1",
     "strapi-plugin-country-select": "^1.0.2"
